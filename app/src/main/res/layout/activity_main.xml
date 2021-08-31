@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Enter a City..."
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="50sp"
+        app:layout_constraintLeft_toLeftOf="@id/imageView"
+        app:layout_constraintRight_toRightOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView" />
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="@id/imageView"
+        app:layout_constraintRight_toRightOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/weatherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/white"
+        android:onClick="findWeather"
+        android:text="What's The Weather"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/imageView"
+        app:layout_constraintRight_toRightOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintLeft_toLeftOf="@id/imageView"
+        app:layout_constraintRight_toRightOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/weatherButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
